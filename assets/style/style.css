@@ -295,7 +295,7 @@ body {
   }
 
   .graph-footer-row {
-    width: 15.5rem;
+    width: 14.5rem;
     height: 7rem;
   }
 
@@ -304,18 +304,18 @@ body {
     margin-top: 1.2rem;
     line-height: 1.5rem;
     letter-spacing: 0.07rem;
-    padding-left: 0.46rem;
+    padding-left: 0.4rem;
   }
 
   .money-spend {
     font-size: 3rem;
     line-height: 3rem;
     letter-spacing: 0.04rem;
-    padding-left: 0.8rem;
+    padding-left: 0.1rem;
   }
 
   .percentage-spend {
-    margin-left: 10.6rem;
+    margin-left: 11rem;
     padding-left: 0.1rem;
     margin-top: 3.5rem;
   }
@@ -326,7 +326,7 @@ body {
     line-height: 1.3rem;
     margin-top: 0.1rem;
     letter-spacing: 0.02rem;
-    margin-left: 5.1rem;
-    padding-left: 0.6rem;
+    margin-left: 4.5rem;
+    padding-left: 1.3rem;
   }
 }
