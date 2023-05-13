@@ -218,7 +218,6 @@ body {
 
 @media screen and (min-width: 1440px) {
   .card-container {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -277,9 +276,6 @@ body {
     margin-top: 1rem;
     height: 15rem;
     gap: 1.31rem;
-  }
-
-  .graph-list-row {
   }
 
   .graph-list-days {
