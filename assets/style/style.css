@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --soft-red: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --very-pale-orange: hsl(33, 100%, 98%);
+  --font-size: 1.125rem;
+  --font-family: "DM Sans", sans-serif;
+  --font-weight-400: 400;
+  --font-weight-700: 700;
+}
+
+.mobile-design {
+  position: absolute;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+body {
+  background-color: var(--cream);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-container {
+  background-color: var(--soft-red);
+  width: 21.5rem;
+  margin-top: 4.1rem;
+  border-radius: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+}
+
+.header {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0.9rem 0rem 0.8rem 0.5rem;
+  justify-content: space-between;
+  height: 5.5rem;
+}
+
+.title-header {
+  font-size: 0.95rem;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-400);
+  color: var(--very-pale-orange);
+}
+
+.title-balance {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-700);
+  color: var(--very-pale-orange);
+}
+
+.circle-logo {
+  margin-top: 0.5rem;
+  height: 2.5rem;
+  padding-left: 7rem;
+}
+
+.bar-graph-container {
+  width: 21.5rem;
+  height: 26.5rem;
+  border-radius: 0.6rem;
+  background-color: var(--very-pale-orange);
+}
+
+.table-graph {
+  display: flex;
+  flex-direction: column;
+  width: 21.5rem;
+  height: 26rem;
+}
+
+.graph-title {
+  width: 21.5rem;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-700);
+  color: var(--dark-brown);
+  font-size: 1.5rem;
+  line-height: 2.9rem;
+  letter-spacing: 0.01rem;
+  padding: 0.99rem 2.6rem 0 0;
+}
+
+.graph-list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.805rem;
+  height: 14rem;
+}
+
+.graph-list-row {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.graph-list-days {
+  font-size: 0.9rem;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-400);
+  color: var(--medium-brown);
+  text-align: center;
+  letter-spacing: 0.01rem;
+  height: 1rem;
+  width: 1.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.bar-graph {
+  margin-bottom: 0.5rem;
+  width: 2rem;
+  background-color: var(--soft-red);
+  border-radius: 0.2rem;
+}
+
+.bar-graph:hover {
+  background-color: var(--cyan);
+}
+
+.graph-container-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+  height: 7.5rem;
+}
+
+.graph-footer-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 6rem;
+  width: 9.5rem;
+  border-top: 2px solid var(--cream);
+}
+
+.graph-footer-title {
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-400);
+  color: var(--medium-brown);
+  letter-spacing: 0.03rem;
+  margin-top: 1.5rem;
+  line-height: 1rem;
+}
+
+.money-spend {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-700);
+  font-size: 1.75rem;
+  letter-spacing: 0.07rem;
+  margin-top: 0.02rem;
+  color: var(--dark-brown);
+}
+
+.percentage-spend {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-700);
+  color: var(--dark-brown);
+  line-height: 1.5rem;
+  height: 1.5rem;
+  margin-left: 6rem;
+  margin-top: 3.3rem;
+  width: 3.4rem;
+  padding-left: 0.2rem;
+  letter-spacing: 0.001rem;
+  padding-top: 0.1rem;
+}
+
+.side-graph-footer-title {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-400);
+  color: var(--medium-brown);
+  font-size: 0.9rem;
+  line-height: 1rem;
+  letter-spacing: 0.01rem;
+  margin-left: 2.4rem;
+  margin-bottom: 0.8rem;
+  width: 6.98rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 3rem;
+  color: var(--medium-brown);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  font-family: var(--font-family);
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-500);
+}
+
+@media screen and (min-width: 1440px) {
+  .card-container {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-container {
+    width: 33.6rem;
+    margin-top: 11.4rem;
+    height: 7.6rem;
+    border-radius: 1rem;
+  }
+
+  .header {
+    width: 32rem;
+    padding: 0.5rem 0rem 0.4rem 1rem;
+  }
+
+  .title-header {
+    font-size: var(--font-size);
+  }
+
+  .title-balance {
+    font-size: 1.95rem;
+  }
+
+  .circle-logo {
+    margin-top: 0.7rem;
+    height: 3rem;
+    padding-left: 13.2rem;
+  }
+
+  .bar-graph-container {
+    margin-top: 0.7rem;
+    width: 33.6rem;
+    height: 32rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .table-graph {
+    width: 32rem;
+    height: 31rem;
+  }
+
+  .graph-title {
+    width: 24.9rem;
+    font-size: 1.95rem;
+    line-height: 3.4rem;
+    padding: 0.99rem 0.05rem 0 0;
+    letter-spacing: 0.015rem;
+  }
+
+  .graph-list-container {
+    margin-top: 1rem;
+    height: 15rem;
+    gap: 1.31rem;
+  }
+
+  .graph-list-row {
+  }
+
+  .graph-list-days {
+    margin-bottom: 1.3rem;
+  }
+
+  .bar-graph {
+    margin-bottom: 0.4rem;
+    width: 2.98rem;
+    background-color: var(--soft-red);
+    border-radius: 0.3rem;
+  }
+
+  .graph-container-footer {
+    margin-top: 0.7rem;
+    height: 8.5rem;
+  }
+
+  .graph-footer-row {
+    width: 15.5rem;
+    height: 7rem;
+  }
+
+  .graph-footer-title {
+    font-size: var(--font-size);
+    margin-top: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.07rem;
+    padding-left: 0.46rem;
+  }
+
+  .money-spend {
+    font-size: 3rem;
+    line-height: 3rem;
+    letter-spacing: 0.04rem;
+    padding-left: 0.8rem;
+  }
+
+  .percentage-spend {
+    margin-left: 10.6rem;
+    padding-left: 0.1rem;
+    margin-top: 3.5rem;
+  }
+
+  .side-graph-footer-title {
+    font-size: var(--font-size);
+    width: 10rem;
+    line-height: 1.3rem;
+    margin-top: 0.1rem;
+    letter-spacing: 0.02rem;
+    margin-left: 5.1rem;
+    padding-left: 0.6rem;
+  }
+}

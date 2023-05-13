@@ -1,43 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style/style.css">
   <title>Frontend Mentor | Expenses chart component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
+
 <body>
+  <!-- <img class="mobile-design" src="./design/desktop-design.jpg" alt=""> -->
+  <main class="card-container">
+    <section class="header-container">
+      <header class="header">
+        <h1 class="title-header">
+          My balance
+        </h1>
+        <h2 class="title-balance">
+          $921.48
+        </h2>
+        <img class="circle-logo" src="./images/logo.svg" alt="logo with two circles overlapping eachother">
+      </header>
+    </section>
 
-  My balance
-  $921.48
+    <section class="bar-graph-container">
+      <table class="table-graph" id="my-graph">
+        <caption class="graph-title">
+          Spending - Last 7 days
+        </caption>
+        <tbody class="graph-list-container">
+          <tr class="graph-list-row">
+            <th scope="row" class="graph-list-days">
+              mon
+            </th>
+            <td class="bar-graph" style="height:50px"></td>
+          </tr>
+          <tr class="graph-list-row">
+            <th scope="row" class="graph-list-days">
+              tue
+            </th>
+            <td class="bar-graph" style="height:100px"></td>
+          </tr>
+          <tr class="graph-list-row">
+            <th scope="row" class="graph-list-days">
+              wed
+            </th>
+            <td class="bar-graph" style="height:150px"></td>
+          </tr>
+          <tr class="graph-list-row">
+            <th scope="row" class="graph-list-days">
+              thur
+            </th>
+            <td class="bar-graph" style="height:89px"></td>
+          </tr>
+          <tr class="graph-list-row">
+            <th scope="row" class="graph-list-days">
+              fri
+            </th>
+            <td class="bar-graph" style="height:67px"></td>
+          </tr>
+          <tr class="graph-list-row">
+            <th scope="row" class="graph-list-days">
+              sat
+            </th>
+            <td class="bar-graph" style="height:124px">
+            </td>
+          </tr>
+          <tr class="graph-list-row">
+            <th scope="row" class="graph-list-days">
+              sun
+            </th>
+            <td class="bar-graph" style="height:73px"></td>
+          </tr>
+        <tfoot class="graph-container-footer">
+          <tr class="graph-footer-row">
+            <th class="graph-footer-title">
+              Total this month
+            </th>
+            <td class="money-spend">
+              $478.33
+            </td>
+          </tr>
+          <tr class="graph-footer-row">
+            <th class="percentage-spend">
+              +2.4%
+            </th>
+            <td class="side-graph-footer-title">
+              from last month
+            </td>
+          </tr>
+        </tfoot>
+        </tbody>
+      </table>
+    </section>
 
-  Spending - Last 7 days
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#" target="_blank">Diego Villarreal</a>.
+    </footer>
+  </main>
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
 
-  Total this month
-  $478.33
 
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <!-- <table id="column-example-17" class="charts-css column show-labels show-primary-axis show-data-axes data-spacing-20">
+    <caption> Column Example #17 </caption>
+    <thead>
+      <tr>
+        <th scope="col"> Year </th>
+        <th scope="col"> Progress </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"> 2016 </th>
+        <td style="--size:0.2;"></td>
+      </tr>
+      <tr>
+        <th scope="row"> 2017 </th>
+        <td style="--size:0.4;"></td>
+      </tr>
+      <tr>
+        <th scope="row"> 2018 </th>
+        <td style="--size:0.6;"></td>
+      </tr>
+      <tr>
+        <th scope="row"> 2019 </th>
+        <td style="--size:0.8;"></td>
+      </tr>
+      <tr>
+        <th scope="row"> 2020 </th>
+        <td style="--size:1;"></td>
+      </tr>
+    </tbody>
+  </table> -->
+  <script src="./assets/script/index.js"></script>
 </body>
+
 </html>
