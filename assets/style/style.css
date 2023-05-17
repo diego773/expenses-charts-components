@@ -289,6 +289,16 @@ body {
     border-radius: 0.3rem;
   }
 
+  .amount {
+    margin-bottom: 0.5rem;
+    background-color: var(--dark-brown);
+    color: var(--very-pale-orange);
+    width: 3.3rem;
+    text-align: center;
+    line-height: 1.7rem;
+    border-radius: 0.3rem;
+  }
+
   .graph-container-footer {
     margin-top: 0.7rem;
     height: 8.5rem;
