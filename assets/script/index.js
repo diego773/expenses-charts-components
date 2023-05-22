@@ -1,48 +1,93 @@
 const tableBody = document.querySelector(".graph-list-container");
 
-const fetchData = async (dataUrl) => {
-  dataUrl = "../data.json";
+const getData = async () => {
+  const url = "../data.json";
   try {
-    const response = await fetch(dataUrl);
-    if (response.ok) {
-      console.log("response", response);
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("Data fetch failed");
     }
     const data = await response.json();
-    console.log("data", data);
-    displaygraph(data);
-    return data;
+    displayGraph(data);
+    console.log(data);
   } catch (error) {
-    console.log("error", error);
+    console.error("There was an error with your fetch operation", error);
   }
 };
 
-const displaygraph = (data) => {
-  data.forEach((expense) => {
-    const roundedExpense = Math.round(expense.amount);
-    console.log("rounded", roundedExpense);
-    const tableRow = document.createElement("tr");
-    const tableHeader = document.createElement("th");
-    const tableData = document.createElement("td");
-    const tableSubHeader = document.createElement("span");
+const displayGraph = (data) => {
+  data.forEach((expenses) => {
+    const barRow = document.createElement("tr");
+    const amountHeader = document.createElement("th");
+    const barData = document.createElement("td");
 
-    tableHeader.textContent = expense.day;
-    tableSubHeader.textContent = `$${expense.amount}`;
-    // tableData.textContent = expense.amount;
+    barRow.classList.add("graph-list-row");
+    amountHeader.classList.add("amount");
+    barData.classList.add("bar-graph");
 
-    tableHeader.classList.add("graph-list-days");
-    tableData.classList.add("bar-graph");
-    tableRow.classList.add("graph-list-row");
-    tableSubHeader.classList.add("amount");
+    amountHeader.setAttribute("data-set", "hidden");
 
-    tableData.style.height = roundedExpense * 2.9 + "px";
-    console.log((tableData.style.height = roundedExpense * 2.9 + "px"));
+    const roundedExpense = Math.round(expenses.amount);
+    barData.style.height = roundedExpense * 2.9 + "px";
 
-    tableRow.appendChild(tableHeader);
-    tableRow.appendChild(tableData);
-    tableRow.appendChild(tableSubHeader);
+    barRow.appendChild(amountHeader);
+    barRow.appendChild(barData);
+    console.log(amountHeader);
 
-    tableBody.appendChild(tableRow);
+    const daysHeader = document.createElement("th");
+
+    daysHeader.textContent = expenses.day;
+
+    daysHeader.classList.add("graph-list-days");
+    barRow.classList.add("graph-list-row");
+
+    barRow.appendChild(daysHeader);
+    tableBody.appendChild(barRow);
+    console.log(daysHeader);
+
+    barData.onmouseover = (event) => {
+      let eventData = event.target;
+      eventData = amountHeader;
+
+      let state = eventData.getAttribute("data-state");
+      eventData.dataset.state = "hidden";
+
+      if (state === "visible") {
+        eventData.textContent = "";
+        eventData.setAttribute("data-set", "hidden");
+      } else {
+        eventData.textContent = `$${expenses.amount}`;
+        eventData.dataset.state = "visible";
+      }
+    };
+
+    barData.onmouseout = (event) => {
+      let eventData = event.target;
+      eventData = amountHeader;
+
+      let state = eventData.getAttribute("data-state");
+      eventData.dataset.state = "hidden";
+
+      if (state === "visible") {
+        eventData.textContent = "";
+        eventData.setAttribute("data-set", "hidden");
+      } else {
+        eventData.textContent = `$${expenses.amount}`;
+        eventData.dataset.state = "visible";
+      }
+    };
   });
+
+  highLightCurrentBar();
 };
 
-fetchData();
+const highLightCurrentBar = () => {
+  const currentDay = (new Date().getDay() - 1 + 7) % 7;
+  const currentBar = document.querySelectorAll(".bar-graph")[currentDay];
+
+  if (currentBar) {
+    currentBar.style.backgroundColor = "var(--cyan)";
+  }
+};
+
+getData();
