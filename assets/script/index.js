@@ -9,7 +9,6 @@ const getData = async () => {
     }
     const data = await response.json();
     displayGraph(data);
-    console.log(data);
   } catch (error) {
     console.error("There was an error with your fetch operation", error);
   }
@@ -32,7 +31,6 @@ const displayGraph = (data) => {
 
     barRow.appendChild(amountHeader);
     barRow.appendChild(barData);
-    console.log(amountHeader);
 
     const daysHeader = document.createElement("th");
 
@@ -43,7 +41,6 @@ const displayGraph = (data) => {
 
     barRow.appendChild(daysHeader);
     tableBody.appendChild(barRow);
-    console.log(daysHeader);
 
     barData.onmouseover = (event) => {
       let eventData = event.target;
